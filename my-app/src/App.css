@@ -1,0 +1,60 @@
+/* App.css */
+
+/* General styles */
+.App {
+  text-align: center;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  background-color: #333;
+}
+
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.main-content {
+  padding-bottom: 100px; /* Adjust as necessary */
+}
+
+.section {
+  padding: 50px 20px;
+}
+
+.contact {
+  margin-bottom: 0; /* Remove margin from contact section */
+}
+
+.footer {
+  background-color: #333; /* Background color for the entire footer section */
+  color: #fff;
+  padding: 20px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  margin: 0; /* Remove margin from footer */
+}
+
+
+
+
+/* Unique styles for each section */
+.about {
+  background-color: #f5f5f5;
+  
+  
+}
+
+
+.services {
+  background-color: #e0e0e0;
+}
+
+.portfolio {
+  background-color: #d5d5d5;
+}
+
+.contact {
+  background-color: #c0c0c0;
+}

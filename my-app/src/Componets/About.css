@@ -1,0 +1,28 @@
+
+.about-container {
+    text-align: center;
+    margin-top: 50px;
+  
+   /* Adjust as needed */
+  }
+  
+  .about-heading {
+    margin-top: 100px;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color:#6b6666
+  }
+  
+  .line {
+    width: 300px;
+    align-items: center;
+    margin: 0 auto;
+    border-bottom: 2px solid #6b6666;
+    margin-bottom: 20px;
+  }
+  
+  .about-text {
+    font-size: 24px;
+  }
+  
