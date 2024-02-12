@@ -4,6 +4,7 @@ import React from 'react';
 import './App.css';
 import Navbar from './Componets/Navbar';
 import About from './Componets/About';
+import Featured from './Componets/Featured';
 
 function App() {
   return (
@@ -18,12 +19,7 @@ function App() {
           
         </section>
         <section className="section services">
-          <h2>Our Services</h2>
-          <ul>
-            <li>Web Development</li>
-            <li>Mobile App Development</li>
-            <li>UI/UX Design</li>
-          </ul>
+         <Featured/>
         </section>
         <section className="section portfolio">
           <h2>Portfolio</h2>

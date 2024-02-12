@@ -1,0 +1,17 @@
+/* Apply styles to multiple cursors */
+::selection {
+    background-color: #ffa500; /* Orange background */
+    color: #fff; /* White text */
+}
+
+/* Apply styles to column (box) selection */
+::-moz-selection {
+    background-color: #ffa500; /* Orange background for Firefox */
+    color: #fff; /* White text for Firefox */
+}
+
+/* Apply styles to column (box) selection */
+::selection {
+    background-color: #ffa500; /* Orange background for other browsers */
+    color: #fff; /* White text for other browsers */
+}
