@@ -5,6 +5,10 @@ import './App.css';
 import Navbar from './Componets/Navbar';
 import About from './Componets/About';
 import Featured from './Componets/Featured';
+import NewsLetter from './Componets/NewsLetter';
+import Product from './Componets/Products';
+
+
 
 function App() {
   return (
@@ -22,18 +26,11 @@ function App() {
          <Featured/>
         </section>
         <section className="section portfolio">
-          <h2>Portfolio</h2>
+          <NewsLetter/>
           {/* Add your portfolio items here */}
         </section>
         <section className="section contact">
-          <h2>Contact Us</h2>
-          <p>Feel free to reach out to us at example@example.com</p>
-          <p>Feel free to reach out to us at example@example.com</p>
-          <p>Feel free to reach out to us at example@example.com</p>
-          <p>Feel free to reach out to us at example@example.com</p>
-          <p>Feel free to reach out to us at example@example.com</p>
-          <p>Feel free to reach out to us at example@example.com</p>
-          <p>Feel free to reach out to us at example@example.com</p>
+          <Product/>
         </section>
       </main>
       <footer className="footer">

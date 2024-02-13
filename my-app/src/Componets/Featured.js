@@ -14,7 +14,7 @@ import AddCart from '../Images/add.png';
 
 function Featured() {
   return (
-    <><div className='title'><h2>Featured</h2></div>
+    <><div className='title'><h2>JUST DROPPED</h2></div>
     <div className="cards-container">
 
       <div className="card">

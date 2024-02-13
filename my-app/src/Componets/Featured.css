@@ -11,29 +11,6 @@
     display: inline-block;
     padding: 0 10px;
   }
-  
-  .title::before,
-  .title::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    border: 2px solid #333; /* Example border color */
-    border-top: none;
-    border-bottom: none;
-  }
-  
-  .title::before {
-    left: -5px;
-    transform: skewX(45deg);
-  }
-  
-  .title::after {
-    right: -5px;
-    transform: skewX(-45deg);
-  }
-  
 
 
 .cards-container {
