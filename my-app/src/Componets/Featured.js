@@ -14,8 +14,11 @@ import AddCart from '../Images/add.png';
 
 function Featured() {
   return (
+    <><div className='title'><h2>Featured</h2></div>
     <div className="cards-container">
+
       <div className="card">
+
         <img src={Image1} alt='Featured' className='cases'></img>
         <div className="card-details">
           <p>$200</p>
@@ -71,7 +74,7 @@ function Featured() {
           <button><img src={Heart} alt='Featured' style={{ width: '20px', height: '20px' }} className='heart1'></img></button>
         </div>
       </div>
-      
+
       <div className="card">
         <img src={Image9} alt='Featured' className='cases'></img>
         <div className="card-details">
@@ -80,7 +83,7 @@ function Featured() {
           <button><img src={Heart} alt='Featured' style={{ width: '20px', height: '20px' }} className='heart1'></img></button>
         </div>
       </div>
-    </div>
+    </div></>
   );
 }
 
