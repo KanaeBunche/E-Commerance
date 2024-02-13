@@ -1,17 +1,37 @@
-/* Apply styles to multiple cursors */
-::selection {
-    background-color: #ffa500; /* Orange background */
-    color: #fff; /* White text */
-}
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Set width according to your design */
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .card-details {
+    padding: 10px 90px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+  }
+  
+  .card-details p {
+    margin: 0;
+  }
+  
 
-/* Apply styles to column (box) selection */
-::-moz-selection {
-    background-color: #ffa500; /* Orange background for Firefox */
-    color: #fff; /* White text for Firefox */
-}
+ 
 
-/* Apply styles to column (box) selection */
-::selection {
-    background-color: #ffa500; /* Orange background for other browsers */
-    color: #fff; /* White text for other browsers */
-}
+
+  
+  
+  
+
+ 
+  
