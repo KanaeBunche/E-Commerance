@@ -6,7 +6,7 @@ import Navbar from './Componets/Navbar';
 import About from './Componets/About';
 import Featured from './Componets/Featured';
 import NewsLetter from './Componets/NewsLetter';
-import Product from './Componets/Products';
+import Products from './Componets/Products';
 
 
 
@@ -27,10 +27,10 @@ function App() {
         </section>
         <section className="section portfolio">
           <NewsLetter/>
-          {/* Add your portfolio items here */}
+      
         </section>
         <section className="section contact">
-          <Product/>
+          <Products/>
         </section>
       </main>
       <footer className="footer">

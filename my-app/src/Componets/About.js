@@ -1,6 +1,6 @@
 import React from 'react';
 import './About.css';
-import Image1 from '../Images/Cases-2/3.svg'
+import Image1 from '../Images/Cases-1/Cases-2/3.svg'
 import Arrow from '../Images/arrow.png';
 // import Image2 from '../Images/Cases-2/4.svg'
 // import Image3 from '../Images/Cases-2/5.svg'
