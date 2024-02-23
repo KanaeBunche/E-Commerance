@@ -21,6 +21,12 @@ function App() {
     console.log('Cart Items:', cartItems); // Log cartItems after updating
 };
 
+const handleDelete = (itemToDelete) => {
+  // Use a filtering approach to create a new array without the deleted item
+  const newCartItems = cartItems.filter((item) => item !== itemToDelete);
+  setCartItems(newCartItems);
+};
+
  
   return (
     <div className="App">
@@ -41,10 +47,10 @@ function App() {
       
         </section>
         <section className="section contact">
-          <Products/>
+          <Products onAddToCart={addToCart}/>
         </section>
         <section className="section contact">
-          <Cart cartItems={cartItems} />
+          <Cart cartItems={cartItems} handleDelete={handleDelete} />
         </section>
        
       </main>

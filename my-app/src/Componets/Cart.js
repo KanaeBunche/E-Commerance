@@ -3,7 +3,8 @@ import './Cart.css';
 import Delete from '../Images/x.png';
 import Heart from '../Images/star.png';
 
-function Cart({ cartItems }) {
+function Cart({ cartItems, handleDelete }) {
+   
   return (
     <>
       <div>
@@ -34,14 +35,19 @@ function Cart({ cartItems }) {
                   ))}
                 </select>
               </div>
-
-              <button className="delete-button">
-                <img
-                  src={Delete}
-                  alt="Delete"
-                  style={{ width: '19px', height: '19px' }}
-                />
-              </button>
+              {cartItems.map((item) => (
+        <div key={item.id}>
+          {item.name}
+          <button onClick={() => handleDelete(item)}>
+          <img
+            src={Delete}
+            alt="Delete"
+            style={{ width: '19px', height: '19px' }}
+            />
+          </button>
+        </div>
+      ))}
+              
             </div>
           </div>
         ))}
