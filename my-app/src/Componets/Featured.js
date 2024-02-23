@@ -1,89 +1,63 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Featured.css';
-import Image1 from '../Images/Cases-1/1.svg';
-import Image2 from '../Images/Cases-1/2.svg';
-import Image3 from '../Images/Cases-1/3.svg';
-import Image4 from '../Images/Cases-1/4.svg';
-import Image5 from '../Images/Cases-1/5.svg';
-import Image6 from '../Images/Cases-1/6.svg';
-import Image7 from '../Images/Cases-1/7.svg';
-import Image8 from '../Images/Cases-1/8.svg';
-import Image9 from '../Images/Cases-1/9.svg';
-import Heart from '../Images/bookmark.png';
 import AddCart from '../Images/add.png';
+import featuredData from '../featured.json';
 
-function Featured() {
+function Featured({onAddToCart}) {
+  const initialFeaturedCases = featuredData['featured-cases'];
+  const [featuredCases, setFeaturedCases] = useState(initialFeaturedCases);
+
+  const handleToggleFavorite = (index) => {
+    const updatedCases = [...featuredCases];
+    updatedCases[index].isFavorite = !updatedCases[index].isFavorite;
+    // Update the state with the modified cases
+    setFeaturedCases(updatedCases);
+  };
+
+
+  const handleAddToCart = (index) => {
+    const clickedItem = featuredCases[index]; // Get the clicked item
+    console.log('Added to Cart:', clickedItem); // Log the clicked item
+    // Perform any other necessary operations like updating state or making API requests
+    
+    // If you need to update the state or perform other operations, you can do it here
+    
+    // If you have a function to add items to the cart, you can call it here
+    onAddToCart(clickedItem);
+  };
+  
+
+ 
+
+  
+  
+
   return (
-    <><div className='title'><h2>JUST DROPPED</h2></div>
-    <div className="cards-container">
+    <div>
+      <h1 className='title'>Featured</h1>
+      <div className="cards-container">
+        {featuredCases.map((featuredCase, index) => (
+          <div className="card" key={index}>
+            <img src={featuredCase.image} alt='Featured' className='cases' />
+            <div className="card-details">
+            <p>{`$${featuredCase.price}`}</p>
 
-      <div className="card">
-
-        <img src={Image1} alt='Featured' className='cases'></img>
-        <div className="card-details">
-          <p>$200</p>
-          <button><img src={AddCart} alt='Featured' style={{ width: '19px', height: '19px' }} className='heart'></img></button>
-          <button><img src={Heart} alt='Featured' style={{ width: '20px', height: '20px' }} className='heart1'></img></button>
-        </div>
+              <button onClick={() => handleAddToCart(index)}>
+                <img src={AddCart} alt='Add to Cart' style={{ width: '30px', height: '30px', position: 'relative' }} className='heart' />
+              </button>
+              <button onClick={() => handleToggleFavorite(index)}>
+                <img
+                  src={featuredCase.isFavorite ? featuredCase.favorite.true : featuredCase.favorite.false}
+                  alt='Favorite'
+                  style={{ width: '20px', height: '20px' }}
+                  className='heart1'
+                />
+              </button>
+            </div>
+          </div>
+        ))}
       </div>
-      <div className="card">
-        <img src={Image2} alt='Featured' className='cases'></img>
-        <div className="card-details">
-          <p>$200</p>
-          <button><img src={AddCart} alt='Featured' style={{ width: '19px', height: '19px' }} className='heart'></img></button>
-          <button><img src={Heart} alt='Featured' style={{ width: '20px', height: '20px' }} className='heart1'></img></button>
-        </div>
-      </div>
-      <div className="card">
-        <img src={Image3} alt='Featured' className='cases'></img>
-        <div className="card-details">
-          <p>$200</p>
-          <button><img src={AddCart} alt='Featured' style={{ width: '19px', height: '19px' }} className='heart'></img></button>
-          <button><img src={Heart} alt='Featured' style={{ width: '20px', height: '20px' }} className='heart1'></img></button>
-        </div>
-      </div>
-      <div className="card">
-        <img src={Image4} alt='Featured' className='cases'></img>
-        <div className="card-details">
-          <p>$200</p>
-          <button><img src={AddCart} alt='Featured' style={{ width: '19px', height: '19px' }} className='heart'></img></button>
-          <button><img src={Heart} alt='Featured' style={{ width: '20px', height: '20px' }} className='heart1'></img></button>
-        </div>
-      </div>
-      <div className="card">
-        <img src={Image5} alt='Featured' className='cases'></img>
-        <div className="card-details">
-          <p>$200</p>
-          <button><img src={AddCart} alt='Featured' style={{ width: '19px', height: '19px' }} className='heart'></img></button>
-          <button><img src={Heart} alt='Featured' style={{ width: '20px', height: '20px' }} className='heart1'></img></button>
-        </div>
-      </div>
-      <div className="card">
-        <img src={Image6} alt='Featured' className='cases'></img>
-        <div className="card-details">
-          <p>$200</p>
-          <button><img src={AddCart} alt='Featured' style={{ width: '19px', height: '19px' }} className='heart'></img></button>
-          <button><img src={Heart} alt='Featured' style={{ width: '20px', height: '20px' }} className='heart1'></img></button>
-        </div>
-      </div>
-      <div className="card">
-        <img src={Image7} alt='Featured' className='cases'></img>
-        <div className="card-details">
-          <p>$200</p>
-          <button><img src={AddCart} alt='Featured' style={{ width: '19px', height: '19px' }} className='heart'></img></button>
-          <button><img src={Heart} alt='Featured' style={{ width: '20px', height: '20px' }} className='heart1'></img></button>
-        </div>
-      </div>
-
-      <div className="card">
-        <img src={Image9} alt='Featured' className='cases'></img>
-        <div className="card-details">
-          <p>$200</p>
-          <button><img src={AddCart} alt='Featured' style={{ width: '19px', height: '19px' }} className='heart'></img></button>
-          <button><img src={Heart} alt='Featured' style={{ width: '20px', height: '20px' }} className='heart1'></img></button>
-        </div>
-      </div>
-    </div></>
+    </div>
   );
 }
 

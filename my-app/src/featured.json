@@ -1,0 +1,81 @@
+{
+    "featured-cases": [
+      {
+        "image": "https://i.ibb.co/BcmBmzL/1.png",
+        "price": 23.99,
+        "favorite": {
+          "true": "https://i.ibb.co/JcHZqL0/star.png",
+          "false": "https://i.ibb.co/LzCFhQ3/blkstar.png"
+        },
+        "in-cart": false
+      },
+      {
+        "image": "https://i.ibb.co/7JZpB6s/9.png",
+        "price": 23.99,
+        "favorite": {
+          "true": "https://i.ibb.co/JcHZqL0/star.png",
+          "false": "https://i.ibb.co/LzCFhQ3/blkstar.png"
+        },
+        "in-cart": false
+      },
+      {
+        "image": "https://i.ibb.co/80pQDNz/8.png",
+        "price": 23.99,
+        "favorite": {
+          "true": "https://i.ibb.co/JcHZqL0/star.png",
+          "false": "https://i.ibb.co/LzCFhQ3/blkstar.png"
+        },
+        "in-cart": false
+      },
+      {
+        "image": "https://i.ibb.co/1m0FxRF/7.png",
+        "price": 23.99,
+        "favorite": {
+          "true": "https://i.ibb.co/JcHZqL0/star.png",
+          "false": "https://i.ibb.co/LzCFhQ3/blkstar.png"
+        },
+        "in-cart": false
+      },
+      {
+        "image": "https://i.ibb.co/F82KdXr/6.png",
+        "price": 23.99,
+        "favorite": {
+          "true": "https://i.ibb.co/JcHZqL0/star.png",
+          "false": "https://i.ibb.co/LzCFhQ3/blkstar.png"
+        },
+        "in-cart": false
+      },
+      {
+        "image": "https://i.ibb.co/cggnGqL/5.png",
+        "price": 23.99,
+        "favorite": {
+          "true": "https://i.ibb.co/JcHZqL0/star.png",
+          "false": "https://i.ibb.co/LzCFhQ3/blkstar.png"
+        },
+        "in-cart": false
+      },
+      {
+        "image": "https://i.ibb.co/gTHwXCg/4.png",
+        "price": 23.99,
+        "favorite": {
+          "true": "https://i.ibb.co/JcHZqL0/star.png",
+          "false": "https://i.ibb.co/LzCFhQ3/blkstar.png"
+        },
+        "in-cart": false
+      },
+      {
+        "image": "https://i.ibb.co/q5961bx/2.png" ,
+        "price": 23.99,
+        "favorite": {
+          "true": "https://i.ibb.co/JcHZqL0/star.png",
+          "false": "https://i.ibb.co/LzCFhQ3/blkstar.png"
+        },
+        "in-cart": false
+      }
+
+
+    ]
+  }
+
+
+

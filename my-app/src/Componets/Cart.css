@@ -1,0 +1,57 @@
+/* Adjust the card container */
+.ards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Align items vertically */
+  }
+  
+  /* Adjust the card */
+ /* Style the card */
+.ard {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 410px; /* Set a fixed width */
+    display: flex;
+    flex-direction: row; /* Arrange items horizontally */
+    align-items: center; /* Center vertically */
+    margin: 10px; /* Adjust margin as needed */
+}
+
+  
+  /* Adjust the image size */
+  .ard img {
+    width: 100px; /* Adjust the width as needed */
+    height: auto;
+  }
+  
+  /* Adjust the layout of the details */
+  .ard-details {
+    display: flex;
+    align-items: center;
+  }
+  
+ /* Adjust the layout of the left section */
+.ard-details .left-section {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Adjust the margin to move closer to the image */
+  }
+  
+  
+  /* Adjust the margin of the quantity selection */
+  .ard-details .quantity-selection {
+    margin-right: 105px; /* Adjust the margin as needed */
+  }
+  
+  /* Remove the margin for the paragraph */
+  .ard-details p {
+    margin: 10px;
+  }
+
+  .heart{
+   padding-right:0px;
+  }
+ 

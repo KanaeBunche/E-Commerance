@@ -1,25 +1,44 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Products.css';
-import Image from '../Images/Cases-1/1.svg'
-import Heart from '../Images/bookmark.png';
 import AddCart from '../Images/add.png';
-
+import phoneData from '../product.json';
 
 function Products() {
-    return (
-   
-      <div className="cards-container">
+  const initialPhoneCases = phoneData['phone-cases'];
+  const [phoneCases, setPhoneCases] = useState(initialPhoneCases);
   
-        <div className="card">
-  
-          <img src={Image} alt='Featured' className='cases'></img>
+
+  const handleToggleFavorite = (index) => {
+    const updatedCases = [...phoneCases];
+    updatedCases[index].isFavorite = !updatedCases[index].isFavorite;
+    // Update the state with the modified cases
+    setPhoneCases(updatedCases);
+  };
+
+  return (
+    <div className="cards-container">
+      {phoneCases.map((phoneCase, index) => (
+        <div className="card" key={index}>
+          <img src={phoneCase.image} alt='Featured' className='cases' />
           <div className="card-details">
-            <p>$200</p>
-            <button><img src={AddCart} alt='Featured' style={{ width: '19px', height: '19px' }} className='heart'></img></button>
-            <button><img src={Heart} alt='Featured' style={{ width: '20px', height: '20px' }} className='heart1'></img></button>
+          <p>{`$${phoneCase.price}`}</p>
+
+            <button>
+              <img src={AddCart} alt='Add to Cart' style={{ width: '30px', height: '30px', position: 'relative' }} className='heart' />
+            </button>
+            <button onClick={() => handleToggleFavorite(index)}>
+              <img 
+                src={phoneCase.isFavorite ? phoneCase.favorite.true : phoneCase.favorite.false} 
+                alt='Favorite' 
+                style={{ width: '20px', height: '20px' }} 
+                className='heart1'
+              />
+            </button>
           </div>
         </div>
-        </div>
-        )
-      }
+      ))}
+    </div>
+  );
+}
+
 export default Products;

@@ -11,9 +11,9 @@ function Navbar() {
                <li className="nav-item"><a href="#about">About ∣</a></li>
                <li className="nav-item"><a href="#shop">Shop ∣</a></li>
                <li className="nav-item"><a href="#help">Help</a></li>
-               <li className='nav-item'> <button className="cart-button">
-                  <img src={Image1} alt="Cart Icon" className="cart-icon" />
-               </button>  </li>
+               <li className='nav-item'>
+               <img src={Image1} alt="Cart Icon" className="cart-icon"/>
+               </li>
 
             </ul>
          </nav>
