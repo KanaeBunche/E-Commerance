@@ -8,6 +8,7 @@ import Featured from './Componets/Featured';
 import NewsLetter from './Componets/NewsLetter';
 import Products from './Componets/Products';
 import Cart from './Componets/Cart';
+import Pay from './Componets/Pay';
 
 
 

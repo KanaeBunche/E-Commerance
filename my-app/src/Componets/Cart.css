@@ -55,3 +55,69 @@
    padding-right:0px;
   }
  
+  .payment-form {
+    width: 100%;
+    max-width: 800px; /* Adjust the maximum width as needed */
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    overflow: hidden; /* Clear floats inside */
+  }
+  
+  .payment-form h2 {
+    margin-bottom: 20px;
+  }
+  
+  .left-side {
+    float: left;
+    width: 50%;
+    padding-right: 20px; /* Adjust spacing between left and right sides */
+    box-sizing: border-box;
+  }
+  
+  .right-side {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  input[type="text"],
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"] {
+    width: 80%; /* Adjust button width as needed */
+    margin: 20px auto; /* Center the button horizontally with top and bottom margin */
+  }
+   p{
+    text-align: center;
+   }

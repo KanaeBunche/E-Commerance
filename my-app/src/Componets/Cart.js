@@ -4,6 +4,13 @@ import Delete from '../Images/x.png';
 import Heart from '../Images/star.png';
 
 function Cart({ cartItems, handleDelete, setCartItems }) {
+  const [cardNumber, setCardNumber] = useState('');
+  const [expiryDate, setExpiryDate] = useState('');
+  const [cvv, setCvv] = useState('');
+  const [name, setName] = useState('');
+  const [amount, setAmount] = useState('');
+
+ 
   // Calculate the total price of all items in the cart
   const [total, setTotal] = useState(0);
 
@@ -20,12 +27,16 @@ function Cart({ cartItems, handleDelete, setCartItems }) {
     setTotal(newTotal);
   };
 
+  // Function to handle submission of the form
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Handle form submission logic here
+  };
+
   return (
-    <>
-      <div>
-        <h1 className="title">Shopping Cart</h1>
-      </div>
+    <div className="art-container">
       <div className="ards-container">
+        {/* Map through the cart items and render each item */}
         {cartItems.map((item, index) => (
           <div className="ard" key={index}>
             <img src={item.image} alt="Featured" className="cases" />
@@ -64,13 +75,76 @@ function Cart({ cartItems, handleDelete, setCartItems }) {
             </div>
           </div>
         ))}
-        {/* Display the total */}
-        <div className="total">
-          <p>Total: ${total.toFixed(2)}</p>
-          <button> Pay</button>
-        </div>
       </div>
-    </>
+      {/* Form to fill out with total price */}
+      
+      <div className="payment-form">
+  <h2>Payment Details</h2>
+  <div className="left-side">
+    {/* Left side of the form */}
+    <div className="form-group">
+      <label htmlFor="firstName">First Name:</label>
+      <input type="text" id="firstName" required />
+    </div>
+   
+    <div className="form-group">
+      <label htmlFor="streetAddress">Street Address:</label>
+      <input type="text" id="streetAddress" required />
+    </div>
+    
+    <div className="form-group">
+      <label htmlFor="city">City:</label>
+      <input type="text" id="city" required />
+    </div>
+    <div className="form-group">
+      <label htmlFor="cardNumber">Card Number</label>
+      <input type="text" id="cardNumber" value={cardNumber} onChange={(e) => setCardNumber(e.target.value)} required />
+    </div>
+    <div className="form-group">
+      <label htmlFor="cvv">CVV</label>
+      <input type="text" id="cvv" value={cvv} onChange={(e) => setCvv(e.target.value)} required />
+    </div>
+    
+  </div>
+  <div className="right-side">
+    {/* Right side of the form */}
+    <div className="form-group">
+      <label htmlFor="lastName">Last Name:</label>
+      <input type="text" id="lastName" required />
+    </div>
+    <div className="form-group">
+      <label htmlFor="state">State:</label>
+      <select id="state" required>
+        <option value="">Select State</option>
+        <option value="NY">New York</option>
+        <option value="CA">California</option>
+        {/* Add more options as needed */}
+      </select>
+    </div>
+    <div className="form-group">
+      <label htmlFor="zipCode">Zip Code:</label>
+      <input type="text" id="zipCode" required />
+    </div>
+    
+    <div className="form-group">
+      <label htmlFor="expiryDate">Expiry Date</label>
+      <input type="text" id="expiryDate" value={expiryDate} onChange={(e) => setExpiryDate(e.target.value)} required />
+    </div>
+   
+    <div className="form-group">
+      <label htmlFor="name">Cardholder Name</label>
+      <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} required />
+    </div>
+  
+      <label>Total Price:</label>
+      <p>${total.toFixed(2)}</p>
+  
+    <button type="submit">Proceed to Payment</button>
+  </div>
+</div>
+
+      </div>
+    
   );
 }
 
