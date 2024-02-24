@@ -8,7 +8,8 @@
           "true": "https://i.ibb.co/JcHZqL0/star.png",
           "false": "https://i.ibb.co/LzCFhQ3/blkstar.png"
         },
-        "in-cart": false
+        "in-cart": false,
+        "quantity":1
       },
       {
         "id": 2,
@@ -18,7 +19,8 @@
           "true": "https://i.ibb.co/JcHZqL0/star.png",
           "false": "https://i.ibb.co/LzCFhQ3/blkstar.png"
         },
-        "in-cart": false
+        "in-cart": false,
+        "quantity":1
       },
       {
         "id": 3,
@@ -28,7 +30,8 @@
           "true": "https://i.ibb.co/JcHZqL0/star.png",
           "false": "https://i.ibb.co/LzCFhQ3/blkstar.png"
         },
-        "in-cart": false
+        "in-cart": false,
+        "quantity":1
       },
       { "id": 4,
         "image": "https://i.ibb.co/1m0FxRF/7.png",
@@ -37,7 +40,8 @@
           "true": "https://i.ibb.co/JcHZqL0/star.png",
           "false": "https://i.ibb.co/LzCFhQ3/blkstar.png"
         },
-        "in-cart": false
+        "in-cart": false,
+        "quantity":1
       },
       { "id":5,
         "image": "https://i.ibb.co/F82KdXr/6.png",
@@ -46,7 +50,8 @@
           "true": "https://i.ibb.co/JcHZqL0/star.png",
           "false": "https://i.ibb.co/LzCFhQ3/blkstar.png"
         },
-        "in-cart": false
+        "in-cart": false,
+        "quantity":1
       },
       { "id":6,
         "image": "https://i.ibb.co/cggnGqL/5.png",
@@ -55,7 +60,8 @@
           "true": "https://i.ibb.co/JcHZqL0/star.png",
           "false": "https://i.ibb.co/LzCFhQ3/blkstar.png"
         },
-        "in-cart": false
+        "in-cart": false,
+        "quantity":1
       },
       { "id":7,
         "image": "https://i.ibb.co/gTHwXCg/4.png",
@@ -64,7 +70,8 @@
           "true": "https://i.ibb.co/JcHZqL0/star.png",
           "false": "https://i.ibb.co/LzCFhQ3/blkstar.png"
         },
-        "in-cart": false
+        "in-cart": false,
+        "quantity":1
       },
       { "id":8,
         "image": "https://i.ibb.co/q5961bx/2.png" ,
@@ -73,7 +80,8 @@
           "true": "https://i.ibb.co/JcHZqL0/star.png",
           "false": "https://i.ibb.co/LzCFhQ3/blkstar.png"
         },
-        "in-cart": false
+        "in-cart": false,
+        "quantity":1
       }
 
 

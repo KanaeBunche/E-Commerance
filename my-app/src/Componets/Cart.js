@@ -1,24 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Cart.css';
 import Delete from '../Images/x.png';
 import Heart from '../Images/star.png';
 
-function Cart({ cartItems, handleDelete, handleQuantityChange }) {
-  
+function Cart({ cartItems, handleDelete, setCartItems }) {
   // Calculate the total price of all items in the cart
-//   const total = cartItems.reduce((acc, curr) => acc + (curr.price * parseInt(target.value)), 0);
-  const total = cartItems.reduce((acc, curr) => {
-    console.log('Current Item:', curr);
-    console.log('Accumulator:', acc);
-    console.log('Total:', curr.price * curr.quantity);
-    console.log('current price:', curr.price)
-    console.log('quantity:', curr.quantity)
-  
-    return acc + (curr.price * curr.quantity);
-  }, 0);
-  
+  const [total, setTotal] = useState(0);
 
-  
+  // Function to handle quantity change for an item
+  const handleQuantityChange = (event, selectedItem) => {
+    const newQuantity = parseInt(event.target.value);
+    const updatedCartItems = cartItems.map((item) =>
+      item === selectedItem ? { ...item, quantity: newQuantity } : item
+    );
+    setCartItems(updatedCartItems);
+
+    // Recalculate the total based on the updated cart items
+    const newTotal = updatedCartItems.reduce((acc, curr) => acc + (curr.price * curr.quantity), 0);
+    setTotal(newTotal);
+  };
 
   return (
     <>
@@ -41,13 +41,13 @@ function Cart({ cartItems, handleDelete, handleQuantityChange }) {
               </button>
               <div className="quantity-selection">
                 <label htmlFor="quantity">Quantity:</label>
-                <select 
-                name="quantity" 
-                id="quantitylist"
-                value={item.quantity}
-                onChange={(e) => handleQuantityChange(e)}
+                <select
+                  name="quantity"
+                  id="quantitylist"
+                  value={item.quantity}
+                  onChange={(e) => handleQuantityChange(e, item)}
                 >
-                  {[...Array(10).keys()].map((quantity) => (
+                  {[...Array(100).keys()].map((quantity) => (
                     <option key={quantity + 1} value={quantity + 1}>
                       {quantity + 1}
                     </option>
@@ -57,10 +57,10 @@ function Cart({ cartItems, handleDelete, handleQuantityChange }) {
               <button onClick={() => handleDelete(item)}>
                 <img
                   src={Delete}
-                alt="Delete"
-                style={{ width: '19px', height: '19px' }}
+                  alt="Delete"
+                  style={{ width: '19px', height: '19px' }}
                 />
-            </button>
+              </button>
             </div>
           </div>
         ))}
@@ -69,7 +69,6 @@ function Cart({ cartItems, handleDelete, handleQuantityChange }) {
           <p>Total: ${total.toFixed(2)}</p>
           <button> Pay</button>
         </div>
-
       </div>
     </>
   );
