@@ -14,18 +14,60 @@ import Cart from './Componets/Cart';
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
+  // Check if all items in the cart have an 'id' property
+
+
 
   //Function to add items to the cart
-  const addToCart = (item) => {
-    setCartItems([...cartItems, item]);
-    console.log('Cart Items:', cartItems); // Log cartItems after updating
+  const addToCart = (newItem) => {
+    setCartItems(prevCartItems => {
+        console.log("Previous Cart Items:", prevCartItems);
+
+        const existingItemIndex = prevCartItems.findIndex(item => item.id === newItem.id);
+        console.log("Existing Item Index:", existingItemIndex);
+
+        if (existingItemIndex !== -1) {
+            const updatedCartItems = prevCartItems.map((item, index) => {
+                if (index === existingItemIndex) {
+                    return {
+                        ...item,
+                        quantity: item.quantity + newItem.quantity
+                    };
+                }
+                return item;
+            });
+            console.log("Updated Cart Items:", updatedCartItems);
+            return updatedCartItems;
+        } else {
+            const newCartItems = [...prevCartItems, newItem];
+            console.log("New Cart Items:", newCartItems);
+            return newCartItems;
+        }
+    });
 };
+
+
+
+  
 
 const handleDelete = (itemToDelete) => {
   // Use a filtering approach to create a new array without the deleted item
   const newCartItems = cartItems.filter((item) => item !== itemToDelete);
   setCartItems(newCartItems);
 };
+
+function handleQuantityChange(event, selectedItem) {
+  console.log('Selected Quantity:', event.target.value);
+const newQuantity = parseInt(event.target.value);
+console.log('Parsed Quantity:', newQuantity);
+
+
+  const updatedCartItems = cartItems.map((item) =>
+    item === selectedItem ? { ...item, quantity: newQuantity } : item
+  );
+  setCartItems(updatedCartItems);
+}
+
 
  
   return (
@@ -50,7 +92,7 @@ const handleDelete = (itemToDelete) => {
           <Products onAddToCart={addToCart}/>
         </section>
         <section className="section contact">
-          <Cart cartItems={cartItems} handleDelete={handleDelete} />
+          <Cart cartItems={cartItems} handleDelete={handleDelete} handleQuantityChange={handleQuantityChange} />
         </section>
        
       </main>

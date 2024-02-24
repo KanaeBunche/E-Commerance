@@ -1,6 +1,7 @@
 {
     "featured-cases": [
       {
+        "id": 1,
         "image": "https://i.ibb.co/BcmBmzL/1.png",
         "price": 23.99,
         "favorite": {
@@ -10,6 +11,7 @@
         "in-cart": false
       },
       {
+        "id": 2,
         "image": "https://i.ibb.co/7JZpB6s/9.png",
         "price": 23.99,
         "favorite": {
@@ -19,6 +21,7 @@
         "in-cart": false
       },
       {
+        "id": 3,
         "image": "https://i.ibb.co/80pQDNz/8.png",
         "price": 23.99,
         "favorite": {
@@ -27,7 +30,7 @@
         },
         "in-cart": false
       },
-      {
+      { "id": 4,
         "image": "https://i.ibb.co/1m0FxRF/7.png",
         "price": 23.99,
         "favorite": {
@@ -36,7 +39,7 @@
         },
         "in-cart": false
       },
-      {
+      { "id":5,
         "image": "https://i.ibb.co/F82KdXr/6.png",
         "price": 23.99,
         "favorite": {
@@ -45,7 +48,7 @@
         },
         "in-cart": false
       },
-      {
+      { "id":6,
         "image": "https://i.ibb.co/cggnGqL/5.png",
         "price": 23.99,
         "favorite": {
@@ -54,7 +57,7 @@
         },
         "in-cart": false
       },
-      {
+      { "id":7,
         "image": "https://i.ibb.co/gTHwXCg/4.png",
         "price": 23.99,
         "favorite": {
@@ -63,7 +66,7 @@
         },
         "in-cart": false
       },
-      {
+      { "id":8,
         "image": "https://i.ibb.co/q5961bx/2.png" ,
         "price": 23.99,
         "favorite": {

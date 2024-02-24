@@ -3,8 +3,23 @@ import './Cart.css';
 import Delete from '../Images/x.png';
 import Heart from '../Images/star.png';
 
-function Cart({ cartItems, handleDelete }) {
-   
+function Cart({ cartItems, handleDelete, handleQuantityChange }) {
+  
+  // Calculate the total price of all items in the cart
+//   const total = cartItems.reduce((acc, curr) => acc + (curr.price * parseInt(target.value)), 0);
+  const total = cartItems.reduce((acc, curr) => {
+    console.log('Current Item:', curr);
+    console.log('Accumulator:', acc);
+    console.log('Total:', curr.price * curr.quantity);
+    console.log('current price:', curr.price)
+    console.log('quantity:', curr.quantity)
+  
+    return acc + (curr.price * curr.quantity);
+  }, 0);
+  
+
+  
+
   return (
     <>
       <div>
@@ -24,10 +39,14 @@ function Cart({ cartItems, handleDelete }) {
                   className="heart1"
                 />
               </button>
-
               <div className="quantity-selection">
                 <label htmlFor="quantity">Quantity:</label>
-                <select name="quantity" id="quantitylist">
+                <select 
+                name="quantity" 
+                id="quantitylist"
+                value={item.quantity}
+                onChange={(e) => handleQuantityChange(e)}
+                >
                   {[...Array(10).keys()].map((quantity) => (
                     <option key={quantity + 1} value={quantity + 1}>
                       {quantity + 1}
@@ -35,22 +54,22 @@ function Cart({ cartItems, handleDelete }) {
                   ))}
                 </select>
               </div>
-              {cartItems.map((item) => (
-        <div key={item.id}>
-          {item.name}
-          <button onClick={() => handleDelete(item)}>
-          <img
-            src={Delete}
-            alt="Delete"
-            style={{ width: '19px', height: '19px' }}
-            />
-          </button>
-        </div>
-      ))}
-              
+              <button onClick={() => handleDelete(item)}>
+                <img
+                  src={Delete}
+                alt="Delete"
+                style={{ width: '19px', height: '19px' }}
+                />
+            </button>
             </div>
           </div>
         ))}
+        {/* Display the total */}
+        <div className="total">
+          <p>Total: ${total.toFixed(2)}</p>
+          <button> Pay</button>
+        </div>
+
       </div>
     </>
   );
