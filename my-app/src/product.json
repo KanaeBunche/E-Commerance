@@ -284,7 +284,7 @@
       },
       "in-cart": true,
       "cartCount": 0,
-      "quantity":1
+      "quantity":0
     },
     { "id": 27,
       "image": "https://i.ibb.co/0KD7djt/27.png",
@@ -295,7 +295,7 @@
       },
       "in-cart": true,
       "cartCount": 0,
-      "quantity":1
+      "quantity":0
     },
     { "id": 28,
       "image": "https://i.ibb.co/bFQBtSZ/28.png",
@@ -306,7 +306,7 @@
       },
       "in-cart": true,
       "cartCount": 0,
-      "quantity":1
+      "quantity":0
     },
     { "id": 29,
       "image": "https://i.ibb.co/gwckVw3/29.png",
@@ -317,7 +317,7 @@
       },
       "in-cart": true,
       "cartCount": 0,
-      "quantity":1
+      "quantity":0
     },
     { "id": 30,
       "image": "https://i.ibb.co/8skKSp7/30.png",
@@ -328,7 +328,7 @@
       },
       "in-cart": true,
       "cartCount": 0,
-      "quantity":1
+      "quantity":0
     },
     { "id": 31,
       "image": "https://i.ibb.co/pwjTBsP/31.png",
@@ -339,7 +339,7 @@
       },
       "in-cart": true,
       "cartCount": 0,
-      "quantity":1
+      "quantity":0
     },
     { "id": 32,
       "image": "https://i.ibb.co/hVZ6rvW/32.png",
@@ -350,7 +350,7 @@
       },
       "in-cart": true,
       "cartCount": 0,
-      "quantity":1
+      "quantity":0
     },
     { "id": 33,
       "image": "https://i.ibb.co/pzMxMYS/33.png",
@@ -361,7 +361,7 @@
       },
       "in-cart": true,
       "cartCount": 0,
-      "quantity":1
+      "quantity":0
     },
     { "id": 34,
       "image": "https://i.ibb.co/5LBBbSh/34.png",
@@ -382,7 +382,7 @@
       },
       "in-cart": true,
       "cartCount": 0,
-      "quantity":1
+      "quantity":0
     },
     { "id": 36,
       "image": "https://i.ibb.co/C7dFBfn/36.png",
@@ -393,7 +393,7 @@
       },
       "in-cart": true,
       "cartCount": 0,
-      "quantity":1
+      "quantity":0
     },
     { "id": 37,
       "image": "https://i.ibb.co/MPPnGXc/37.png",
@@ -404,7 +404,7 @@
       },
       "in-cart": true,
       "cartCount": 0,
-      "quantity":1
+      "quantity":0
     },
     { "id": 38,
       "image": "https://i.ibb.co/52vzJ28/38.png",
@@ -415,7 +415,7 @@
       },
       "in-cart": true,
       "cartCount": 0,
-      "quantity":1
+      "quantity":0
     },
     { "id": 39,
       "image": "https://i.ibb.co/30GD8bB/39.png",
@@ -426,7 +426,7 @@
       },
       "in-cart": true,
       "cartCount": 0,
-      "quantity":1
+      "quantity":0
     },
     { "id": 40,
       "image": "https://i.ibb.co/RTH7sDy/40.png",
@@ -437,7 +437,7 @@
       },
       "in-cart": true,
       "cartCount": 0,
-      "quantity":1
+      "quantity":0
     },
     { "id": 41,
       "image": "https://i.ibb.co/B2G8szj/41.png",
@@ -448,7 +448,7 @@
       },
       "in-cart": true,
       "cartCount": 0,
-      "quantity":1
+      "quantity":0
     },
     { "id": 42,
       "image": "https://i.ibb.co/1dXc8jf/42.png",
@@ -459,7 +459,7 @@
       },
       "in-cart": true,
       "cartCount": 0,
-      "quantity":1
+      "quantity":0
     },
     { "id": 43,
       "image": "https://i.ibb.co/Gp6XWsS/43.png",
@@ -470,7 +470,7 @@
       },
       "in-cart": true,
       "cartCount": 0,
-      "quantity":1
+      "quantity":0
     },
     { "id": 44,
       "image": "https://i.ibb.co/qsx8Kmb/44.png",
@@ -481,7 +481,7 @@
       },
       "in-cart": true,
       "cartCount": 0,
-      "quantity":1
+      "quantity":0
     },
     { "id": 45,
       "image": "https://i.ibb.co/VMqJ4cB/45.png",
@@ -492,7 +492,7 @@
       },
       "in-cart": true,
       "cartCount": 0,
-      "quantity":1
+      "quantity":0
     },
     { "id": 46,
       "image": "https://i.ibb.co/PjT5k37/46.png",
@@ -503,7 +503,7 @@
       },
       "in-cart": true,
       "cartCount": 0,
-      "quantity":1
+      "quantity":0
     },
     { "id": 47,
       "image": "https://i.ibb.co/Wghkh2C/47.png",
@@ -514,7 +514,7 @@
       },
       "in-cart": true,
       "cartCount": 0,
-      "quantity":1
+      "quantity":0
     }
   ]
 }

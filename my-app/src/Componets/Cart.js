@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Cart.css';
 import Delete from '../Images/x.png';
 import Heart from '../Images/star.png';
@@ -27,6 +27,13 @@ function Cart({ cartItems, handleDelete, setCartItems }) {
     setTotal(newTotal);
   };
 
+  // Add a useEffect hook to recalculate total when cartItems change
+  useEffect(() => {
+    const newTotal = cartItems.reduce((acc, curr) => acc + (curr.price * curr.quantity), 0);
+    setTotal(newTotal);
+  }, [cartItems]);
+
+
   // Function to handle submission of the form
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -35,6 +42,9 @@ function Cart({ cartItems, handleDelete, setCartItems }) {
 
   return (
     <div className="art-container">
+      <h1>Shopping Cart</h1>
+       <form className="payment-form"onSubmit={handleSubmit}>
+  <h2>Payment Details</h2>
       <div className="ards-container">
         {/* Map through the cart items and render each item */}
         {cartItems.map((item, index) => (
@@ -78,8 +88,9 @@ function Cart({ cartItems, handleDelete, setCartItems }) {
       </div>
       {/* Form to fill out with total price */}
       
-      <div className="payment-form">
-  <h2>Payment Details</h2>
+      
+     
+  
   <div className="left-side">
     {/* Left side of the form */}
     <div className="form-group">
@@ -128,7 +139,14 @@ function Cart({ cartItems, handleDelete, setCartItems }) {
     
     <div className="form-group">
       <label htmlFor="expiryDate">Expiry Date</label>
-      <input type="text" id="expiryDate" value={expiryDate} onChange={(e) => setExpiryDate(e.target.value)} required />
+      <input type="text" 
+      id="expiryDate" 
+      value={expiryDate} 
+      onChange={(e) => setExpiryDate(e.target.value)} 
+      placeholder='MM/YY'
+      maxLength="7"
+      minLength="7"
+      required />
     </div>
    
     <div className="form-group">
@@ -139,11 +157,13 @@ function Cart({ cartItems, handleDelete, setCartItems }) {
       <label>Total Price:</label>
       <p>${total.toFixed(2)}</p>
   
-    <button type="submit">Proceed to Payment</button>
+    <button type="submit">Pay</button>
+    
   </div>
+  </form>
 </div>
 
-      </div>
+      
     
   );
 }
