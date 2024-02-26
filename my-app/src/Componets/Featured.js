@@ -26,12 +26,6 @@ function Featured({onAddToCart}) {
     onAddToCart(clickedItem);
   };
   
-
- 
-
-  
-  
-
   return (
     <div>
       <h1 className='title'>Featured</h1>

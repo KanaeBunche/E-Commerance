@@ -1,0 +1,10 @@
+.section {
+    padding: 50px 20px;
+  }
+  
+  .cart{
+    margin-bottom: 0;
+    background-color: white; /* Remove margin from contact section */
+  }
+
+  

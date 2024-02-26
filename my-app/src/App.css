@@ -23,7 +23,7 @@
   padding: 50px 20px;
 }
 
-.contact {
+.product {
   margin-bottom: 0; /* Remove margin from contact section */
 }
 
@@ -57,7 +57,24 @@
   background-color: white;
 }
 
-.contact {
+.product {
   background-color:white;
   
+}
+
+.message {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color:black;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 5px;
+  z-index: 9999; /* Ensure it appears on top of other elements */
+  display: none; /* Initially hide the message */
+}
+
+.show {
+  display: block; /* Show the message when the 'show' class is applied */
 }
