@@ -6,22 +6,75 @@ function LoginForm() {
   const [activeTab, setActiveTab] = useState('login');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Your login or register logic goes here
-    if (activeTab === 'register') {
-      // Registration logic
-      console.log('Registering user:', { firstName, lastName });
-    } else {
-      // Login logic
-      console.log('Logging in with username:', event.target.username.value);
-    }
-  };
+
+
+
+  function handleSubmit(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    const formData = {
+      username: username,
+      password: password,
+      firstName: firstName,
+      lastName: lastName
+    };
+
+    fetch('http://127.0.0.1:5555/newuser', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => {
+        if (response.ok) {
+          console.log('User registered successfully!');
+          // Handle successful registration here
+        } else {
+          console.error('Registration failed.');
+          // Handle registration failure here
+        }
+      })
+      .catch((error) => {
+        console.error('Error registering user:', error);
+        // Handle error here
+      });
+  }
+  function handleSubmitLogin() {
+    const formData = {
+      username: username,
+      password: password,
+    };
+
+    fetch('http://127.0.0.1:5555/userlogin', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    })
+    .then((response) => {
+        if (response.ok) {
+          console.log('User Logged In!');
+          // Handle successful registration here
+        } else {
+          console.error('Login Failed.');
+          // Handle registration failure here
+        }
+      })
+      .catch((error) => {
+        console.error('Error logging in  user:', error);
+        // Handle error here
+      });
+  }
 
   return (
     <><dv>
@@ -42,9 +95,9 @@ function LoginForm() {
                       <p>Register</p>
                   </div>
               </div>
-              <form onSubmit={handleSubmit}>
-                  {activeTab === 'register' && (
-                      <>
+              <form onSubmit={activeTab === 'login' ? handleSubmitLogin : handleSubmit}>
+          {activeTab === 'register' && (
+            <>
                           <div className="form-group">
                               <label className="firstName">First Name</label>
                               <input type="text" id="firstName" name="firstName" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
