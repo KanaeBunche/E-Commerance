@@ -10,6 +10,7 @@ import NewsLetter from './Componets/NewsLetter';
 import Products from './Componets/Products';
 import Cartpage from './Componets/Cartpage';
 import LoginForm from './Componets/LoginForm';
+import Thankyou from './Componets/Thankyou';
 // import Profile from './Componets/Profile';
 
 
@@ -68,6 +69,7 @@ return (
         <Route path="/" element={<MainContent setCartItems={setCartItems} addToCart={addToCart} cartCount={cartCount}/>} />
         <Route path="/cartpage" element={<Cartpage cartItems={cartItems} handleDelete={handleDelete} setCartItems={setCartItems} />} />
         <Route path="/login" element={<LoginForm/>}/>
+        <Route path="/thank-you" element={<Thankyou/>}/>
         </Routes>
       <div className={`message ${showMessage ? 'show' : ''}`}>Item added to cart !</div>
     </BrowserRouter>
