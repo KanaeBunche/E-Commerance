@@ -1,0 +1,70 @@
+.login-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 0px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Barriecito', system-ui;
+  }
+  
+  .login-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+    font-family: 'Barriecito', system-ui;
+  }
+  
+  .login-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: black;
+    font-family: 'Barriecito', system-ui;
+  }
+  
+  .login-form input[type="text"],
+  .login-form input[type="password"] {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-family: 'Barriecito', system-ui;
+  }
+
+  .login-form input[type="password"]{
+    width:280px;
+    font-family: 'Barriecito', system-ui;
+  }
+  
+  .login-form button {
+    width: 300px;
+    padding: 12px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Barriecito', system-ui;
+  }
+  
+  .login-form button:hover {
+    background-color: black;
+  }
+   
+  .tabs div {
+    cursor: pointer; /* Add cursor pointer */
+  }
+
+  #register{
+   text-align: center
+
+  }
+
+  #login{
+    text-align: center
+  }

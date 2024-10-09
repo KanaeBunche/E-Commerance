@@ -1,0 +1,123 @@
+/* Adjust the card container */
+.ards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Align items vertically */
+  }
+  
+  /* Adjust the card */
+ /* Style the card */
+.ard {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 420px; /* Set a fixed width */
+    display: flex;
+    flex-direction: row; /* Arrange items horizontally */
+    align-items: center; /* Center vertically */
+    margin: 10px; /* Adjust margin as needed */
+}
+
+  
+  /* Adjust the image size */
+  .ard img {
+    width: 100px; /* Adjust the width as needed */
+    height: auto;
+  }
+  
+  /* Adjust the layout of the details */
+  .ard-details {
+    display: flex;
+    align-items: center;
+  }
+  
+ /* Adjust the layout of the left section */
+.ard-details .left-section {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Adjust the margin to move closer to the image */
+  }
+  
+  
+  /* Adjust the margin of the quantity selection */
+  .ard-details .quantity-selection {
+    margin-right: 105px; /* Adjust the margin as needed */
+  }
+  
+  /* Remove the margin for the paragraph */
+  .ard-details p {
+    margin: 10px;
+  }
+
+  .heart{
+   padding-right:0px;
+  }
+ 
+  .payment-form {
+    width: 100%;
+    max-width: 800px; /* Adjust the maximum width as needed */
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    overflow: hidden; /* Clear floats inside */
+  }
+  
+  .payment-form h2 {
+    margin-bottom: 20px;
+  }
+  
+  .left-side {
+    float: left;
+    width: 50%;
+    padding-right: 20px; /* Adjust spacing between left and right sides */
+    box-sizing: border-box;
+  }
+  
+  .right-side {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  input[type="text"],
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"] {
+    width: 80%; /* Adjust button width as needed */
+    margin: 20px auto; /* Center the button horizontally with top and bottom margin */
+  }
+   p{
+    text-align: center;
+   }
